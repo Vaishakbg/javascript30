@@ -10,7 +10,7 @@
 
     html {
       font-family: sans-serif;
-      background: #ffc600;
+      background: #fff;
     }
 
     .inbox {
@@ -103,6 +103,7 @@ const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 let lastChecked;
 
 function handleCheck(e) {
+  console.log(this, e.shiftKey);
   // Check if they had the shift key down
   // AND check that they are checking it
   let inBetween = false;
@@ -126,6 +127,7 @@ function handleCheck(e) {
 }
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
 </script>
 </body>
 </html>
